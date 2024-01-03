@@ -14,6 +14,13 @@ body *::before {
 	box-sizing: border-box;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
 .App {
 	font-family: 'SpaceGrotesk', sans-serif;
 	color: var(--color-white);
