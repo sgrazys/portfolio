@@ -1,10 +1,46 @@
-function Header() {
+import Button from './Button';
+import NavItem from './NavItem';
+import Logo from './Logo';
+
+function Header({ socialmediaList }) {
+	console.log(socialmediaList);
 	return (
 		<header className='header'>
 			<div className='navigation'>
-				<div className='logo'>sauliusgrazys</div>
+				<Logo />
 				<ul className='icons'>
-					<li className='icon'>
+					{socialmediaList.map((socialMedia) => (
+						<NavItem
+							key={socialMedia.id}
+							socialMedia={socialMedia}
+						/>
+					))}
+				</ul>
+				<div className='mobile-profile-img'></div>
+			</div>
+
+			<div className='header-content-bin'>
+				<div className='header-content'>
+					<h1 className='main-heading'>
+						Nice to meet you! I'm <span>Saulius Grazys</span>.
+					</h1>
+					<p className='header-body'>
+						Based in Vilnius, Lithuania, I'm eager to become a professional front-end developer passionate about building accessible and modern web apps that users
+						love.
+					</p>
+					<Button>Contact me</Button>
+				</div>
+
+				<div className='profile-img'></div>
+			</div>
+		</header>
+	);
+}
+
+export default Header;
+
+/* 
+<li className='icon'>
 						<a
 							href='https://github.com/sgrazys'
 							target='_blank'
@@ -37,23 +73,4 @@ function Header() {
 							/>
 						</a>
 					</li>
-				</ul>
-				<div className='mobile-profile-img'></div>
-			</div>
-
-			<div className='header-content-bin'>
-				<div className='header-content'>
-					<h1 className='heading-xl'>
-						Nice to meet you! I'm <span>Saulius Grazys</span>
-					</h1>
-					<p className='body'>Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</p>
-					<button className='btn'>CONTACT</button>
-				</div>
-
-				<div className='profile-img'></div>
-			</div>
-		</header>
-	);
-}
-
-export default Header;
+*/
