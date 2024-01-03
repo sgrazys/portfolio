@@ -1,3 +1,5 @@
+import data from '../data.js';
+
 import Header from './Header';
 
 function App() {
