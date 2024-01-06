@@ -2,10 +2,9 @@ import Button from './Button';
 import NavItem from './NavItem';
 import Logo from './Logo';
 
-function Header({ socialmediaList }) {
-	console.log(socialmediaList);
+function Header({ socialmediaList, fullName }) {
 	return (
-		<header className='header'>
+		<>
 			<div className='navigation'>
 				<Logo />
 				<ul className='icons'>
@@ -16,24 +15,25 @@ function Header({ socialmediaList }) {
 						/>
 					))}
 				</ul>
-				<div className='mobile-profile-img'></div>
 			</div>
 
 			<div className='header-content-bin'>
+				<div className='mobile-profile-img'></div>
 				<div className='header-content'>
 					<h1 className='main-heading'>
-						Nice to meet you! I'm <span>Saulius Grazys</span>.
+						Nice to meet you! I'm <span> {fullName}</span>.
 					</h1>
 					<p className='header-body'>
-						Based in Vilnius, Lithuania, I'm eager to become a professional front-end developer passionate about building accessible and modern web apps that users
-						love.
+						Based in Vilnius, Lithuania. Passionate and dedicated Front-end developer seeking an entry-level position to embark on a journey in web development. I am
+						drive to create visually captivating, user-friendly and modern digital experiences. I bring a blend of enthusiasm, adaptability, and a continuous hunger to
+						learn and grow in the dynamic world of Front-end development.
 					</p>
 					<Button>Contact me</Button>
 				</div>
 
 				<div className='profile-img'></div>
 			</div>
-		</header>
+		</>
 	);
 }
 

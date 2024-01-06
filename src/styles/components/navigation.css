@@ -15,14 +15,3 @@
 	z-index: 10;
 	list-style: none;
 }
-
-.mobile-profile-img {
-	height: 38rem;
-	width: 17.5rem;
-
-	background-image: url('../../../public/assets/images/image-profile-mobile.webp');
-	background-size: cover;
-	background-repeat: no-repeat;
-
-	margin-top: -10rem;
-}

@@ -1,3 +1,9 @@
+.header-content-bin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .header-content {
 	text-align: center;
 
@@ -6,6 +12,17 @@
 	align-items: center;
 	justify-content: center;
 	gap: 2.4rem;
+}
+
+.mobile-profile-img {
+	background-image: url('../../../public/assets/images/image-profile-mobile.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 38rem;
+	width: 17.5rem;
+	margin-top: -11.5em;
+	margin-bottom: 4em;
+	position: relative;
 }
 
 .main-heading {

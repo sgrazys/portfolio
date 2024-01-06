@@ -7,4 +7,9 @@
 	line-height: 1.625;
 	text-transform: uppercase;
 	border-bottom: 2px solid var(--color-primary);
+	transition: all 0.3s;
+}
+
+.btn:hover {
+	color: var(--color-primary);
 }
