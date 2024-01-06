@@ -31,39 +31,3 @@ function Header({ socialmediaList, fullName }) {
 }
 
 export default Header;
-
-/* 
-<li className='icon'>
-						<a
-							href='https://github.com/sgrazys'
-							target='_blank'
-							rel='noreferrer'>
-							<img
-								src={process.env.PUBLIC_URL + '/assets/images/icon-github.svg'}
-								alt=''
-							/>
-						</a>
-					</li>
-					<li className='icon'>
-						<a
-							href='https://www.frontendmentor.io/profile/sgrazys'
-							target='_blank'
-							rel='noreferrer'>
-							<img
-								src={process.env.PUBLIC_URL + '/assets/images/icon-frontend-mentor.svg'}
-								alt=''
-							/>
-						</a>
-					</li>
-					<li className='icon'>
-						<a
-							href='https://www.linkedin.com/in/saulius-grazys/'
-							target='_blank'
-							rel='noreferrer'>
-							<img
-								src={process.env.PUBLIC_URL + '/assets/images/icon-linkedin.svg'}
-								alt=''
-							/>
-						</a>
-					</li>
-*/

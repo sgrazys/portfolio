@@ -1,8 +1,16 @@
-main > .rings {
+.skills-container {
+	position: relative;
+}
+
+.skills-container > .rings-container {
 	position: absolute;
+	left: 189px;
 	top: 100%;
 	transform: translateY(-50%);
-	left: 189px;
+}
+
+.skills-container .rings {
+	width: 100%;
 }
 
 .skills {
@@ -10,9 +18,11 @@ main > .rings {
 	grid-template-columns: 1fr;
 	justify-items: center;
 	gap: 2.4rem;
+
 	border-top: 1px solid var(--color-white);
 	border-bottom: 1px solid var(--color-white);
 	padding: 4em 0;
+	margin: 0 1.6rem;
 }
 
 .skill {

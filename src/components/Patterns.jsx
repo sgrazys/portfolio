@@ -20,6 +20,7 @@ export function Circle() {
 export function Rings() {
 	return (
 		<svg
+			className='rings'
 			xmlns='http://www.w3.org/2000/svg'
 			width='530'
 			height='129'>
