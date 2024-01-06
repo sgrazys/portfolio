@@ -7,7 +7,7 @@ const myData = {
 
 	skills: [
 		{ title: 'HTML', level: 'Intermediate' },
-		{ title: 'CSS', level: 'Beginner' },
+		{ title: 'CSS', level: 'Intermediate' },
 		{ title: 'JavaScript', level: 'Beginner' },
 		{ title: 'React', level: 'Beginner' },
 		{ title: 'Sass', level: 'Beginner' },

@@ -1,20 +1,13 @@
 import Button from './Button';
-import NavItem from './NavItem';
 import Logo from './Logo';
+import NavList from './NavList';
 
 function Header({ socialmediaList, fullName }) {
 	return (
 		<>
 			<div className='navigation'>
 				<Logo />
-				<ul className='icons'>
-					{socialmediaList.map((socialMedia) => (
-						<NavItem
-							key={socialMedia.name}
-							socialMedia={socialMedia}
-						/>
-					))}
-				</ul>
+				<NavList socialmediaList={socialmediaList} />
 			</div>
 
 			<div className='header-content-bin'>
