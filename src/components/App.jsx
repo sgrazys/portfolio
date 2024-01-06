@@ -20,6 +20,7 @@ function App() {
 			</header>
 			<main>
 				<SkillsList skillArr={skills} />
+				<Ring />
 			</main>
 		</div>
 	);

@@ -25,6 +25,10 @@ ul {
 	list-style: none;
 }
 
+main {
+	position: relative;
+}
+
 .App {
 	font-family: 'SpaceGrotesk', sans-serif;
 	color: var(--color-white);
