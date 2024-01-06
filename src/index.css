@@ -1,16 +1,11 @@
 /* BASE */
 @import url('./styles/base.css');
 
-/* LAYOUTS */
-@import url('./styles/layouts/header.css');
-
 /* COMPONENTS */
 @import url('./styles/components/button.css');
 @import url('./styles/components/header.css');
 @import url('./styles/components/navigation.css');
-
-/* LAYOUTS */
-@import url('./styles/layouts/navigation.css');
+@import url('./styles/components/skillList.css');
 
 /* UTILITIES */
 

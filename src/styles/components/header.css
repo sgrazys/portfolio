@@ -1,3 +1,21 @@
+header > .rings {
+	position: absolute;
+	margin-left: -342px;
+	margin-top: 124px;
+}
+
+header > .circle {
+	position: absolute;
+	width: 100%;
+	top: 32.6%;
+	left: 83%;
+	z-index: 10;
+}
+
+.header {
+	margin-bottom: 8em;
+}
+
 .header-content-bin {
 	display: flex;
 	flex-direction: column;

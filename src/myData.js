@@ -6,16 +6,14 @@ const myData = {
 	],
 
 	skills: [
-		{ skill: 'HTML', level: 'Intermediate' },
-		{ skill: 'CSS', level: 'Intermediate' },
-		{ skill: 'JavaScript', level: 'Beginner' },
-		{ skill: 'React', level: 'Beginner' },
-		{ skill: 'Sass', level: 'Beginner' },
-		{ skill: 'SQL', level: 'Basics' },
-		{ skill: 'Git', level: 'Basics' },
-		{ skill: 'GitHub', level: 'Intermediate' },
-		{ skill: 'Software Testing', level: 'Basics' },
-		{ skill: 'Agile', level: 'Basics' },
+		{ title: 'HTML', level: 'Intermediate' },
+		{ title: 'CSS', level: 'Beginner' },
+		{ title: 'JavaScript', level: 'Beginner' },
+		{ title: 'React', level: 'Beginner' },
+		{ title: 'Sass', level: 'Beginner' },
+		{ title: 'SQL', level: 'Basics' },
+		{ title: 'Software Testing', level: 'Basics' },
+		{ title: 'Agile', level: 'Basics' },
 	],
 };
 

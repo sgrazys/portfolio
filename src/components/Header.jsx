@@ -10,7 +10,7 @@ function Header({ socialmediaList, fullName }) {
 				<ul className='icons'>
 					{socialmediaList.map((socialMedia) => (
 						<NavItem
-							key={socialMedia.id}
+							key={socialMedia.name}
 							socialMedia={socialMedia}
 						/>
 					))}

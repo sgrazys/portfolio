@@ -3,22 +3,25 @@ import Header from './Header';
 import { v4 as uuidv4 } from 'uuid';
 import Ring from './Rings';
 import { Circle } from './Patterns';
+import SkillsList from './SkillsList';
 
-const { socialMedia } = myData;
-const socialmediaData = socialMedia.map((el) => ({ ...el, id: uuidv4() }));
+const { socialMedia, skills } = myData;
 
 function App() {
+	console.log(skills);
 	return (
 		<div className='App'>
 			<header className='header'>
 				<Ring />
 				<Circle />
 				<Header
-					socialmediaList={socialmediaData}
+					socialmediaList={socialMedia}
 					fullName={'Saulius Grazys'}
 				/>
 			</header>
-			<main></main>
+			<main>
+				<SkillsList skillArr={skills} />
+			</main>
 		</div>
 	);
 }
