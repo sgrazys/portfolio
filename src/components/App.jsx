@@ -1,6 +1,7 @@
 import myData from '../myData';
 import CirclePattern from './CirclePattern';
 import Header from './Header';
+import Projects from './Projects';
 import RingPattern from './RingPattern';
 
 import SkillsList from './SkillsList';
@@ -21,6 +22,7 @@ function App() {
 			</header>
 			<main>
 				<SkillsList skillArr={skills} />
+				<Projects />
 			</main>
 		</div>
 	);

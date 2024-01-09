@@ -1,9 +1,9 @@
-function Button({ children }) {
+function Button({ children, url }) {
 	return (
 		<a
 			className='btn'
 			role='button'
-			href='https://www.google.com'>
+			href={url}>
 			{children}
 		</a>
 	);

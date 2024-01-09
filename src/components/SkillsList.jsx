@@ -1,4 +1,3 @@
-import { Rings } from './Patterns';
 import RingPattern from './RingPattern';
 import Skill from './Skill';
 
