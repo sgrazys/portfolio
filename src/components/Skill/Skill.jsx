@@ -1,3 +1,5 @@
+import './Skill.css';
+
 function Skill({ skill }) {
 	return (
 		<li className='skill'>

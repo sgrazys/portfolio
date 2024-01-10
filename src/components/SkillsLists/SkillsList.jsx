@@ -1,5 +1,6 @@
-import RingPattern from './RingPattern';
-import Skill from './Skill';
+import './SkillsList.css';
+import { Rings } from '../GraphicElements';
+import Skill from '../Skill/Skill';
 
 function SkillsList({ skillArr }) {
 	return (
@@ -12,7 +13,9 @@ function SkillsList({ skillArr }) {
 					/>
 				))}
 			</ul>
-			<RingPattern />
+			<div className='rings-container'>
+				<Rings />
+			</div>
 		</section>
 	);
 }

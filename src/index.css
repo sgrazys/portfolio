@@ -1,13 +1,42 @@
-/* BASE */
-@import url('./styles/base.css');
+:root {
+	/* COLORS*/
 
-/* COMPONENTS */
-@import url('./styles/components/button.css');
-@import url('./styles/components/header.css');
-@import url('./styles/components/navigation.css');
-@import url('./styles/components/projects.css');
-@import url('./styles/components/skillList.css');
+	--color-black: #151515;
+	--color-white: #ffffff;
+	--color-primary: #4ee1a0;
+	--color-gray: #242424;
+	--color-light-gray: #d9d9d9;
+}
 
-/* UTILITIES */
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
 
-@import url('./styles/utilities/variables.css');
+body,
+body *,
+body *::after,
+body *::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.App {
+	font-family: 'SpaceGrotesk', sans-serif;
+	color: var(--color-white);
+	background-color: var(--color-black);
+
+	min-height: 100vh;
+}

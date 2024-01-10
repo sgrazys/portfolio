@@ -1,0 +1,10 @@
+.icon-link {
+	cursor: pointer;
+}
+
+.icon path {
+	transition: all 0.3s;
+}
+.icon:hover path {
+	fill: var(--color-primary);
+}

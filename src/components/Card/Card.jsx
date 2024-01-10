@@ -1,4 +1,5 @@
-import Button from './Button';
+import './Card.css';
+import Button from '../Button/Button';
 
 function Card({ title, children }) {
 	return (

@@ -1,0 +1,28 @@
+.card {
+	width: 100%;
+	max-width: 343px;
+}
+
+.card__img {
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+.card__title {
+	font-size: 2.4rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.3333;
+}
+
+.card__tools {
+	display: flex;
+	gap: 1.8em;
+	margin-bottom: 1.1111em;
+}
+
+.card__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3.2em;
+}

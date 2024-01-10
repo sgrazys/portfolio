@@ -18,23 +18,3 @@ const myData = {
 };
 
 export default myData;
-
-/*
-{
-	name: 'GitHub',
-	url: 'https://github.com/sgrazys',
-	icon: '/assets/images/icon-github.svg',
-},
-
-{
-	name: 'FrontendMentor',
-	url: 'https://www.frontendmentor.io/profile/sgrazys',
-	icon: '/assets/images/icon-frontend-mentor.svg',
-},
-
-{
-	name: 'LinkedIn',
-	url: 'https://www.linkedin.com/in/saulius-grazys/',
-	icon: '/assets/images/icon-linkedin.svg',
-},
-*/

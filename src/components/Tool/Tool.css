@@ -1,0 +1,6 @@
+.tool {
+	font-size: 1.8rem;
+	line-height: 1.5555;
+	color: var(--color-light-gray);
+	text-transform: uppercase;
+}

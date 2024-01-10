@@ -1,12 +1,13 @@
-import Button from './Button';
-import Card from './Card';
-import Tool from './Tool';
+import './Projects.css';
+import Button from '../Button/Button';
+import Card from '../Card/Card';
+import Tool from '../Tool/Tool';
 
 function Projects() {
 	return (
 		<section className='projects'>
 			<div className='projects__header'>
-				<div className='header__title'>Projects</div>
+				<h2 className='header__title'>Projects</h2>
 				<Button>Contact me</Button>
 			</div>
 			<ul className='cards'>

@@ -1,0 +1,27 @@
+.projects {
+	padding: 0 1.6em 8em;
+}
+
+.projects__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 40rem;
+	margin-bottom: 4em;
+}
+
+.header__title {
+	font-size: 4rem;
+	font-weight: 700;
+	color: var(--color-white);
+	letter-spacing: -1.14px;
+	line-height: 1;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	gap: 4em;
+}
