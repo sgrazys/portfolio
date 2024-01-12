@@ -12,7 +12,6 @@ const myData = {
 		{ title: 'React', level: 'Beginner' },
 		{ title: 'Sass', level: 'Beginner' },
 		{ title: 'SQL', level: 'Basics' },
-		{ title: 'Software Testing', level: 'Basics' },
 		{ title: 'Agile', level: 'Basics' },
 	],
 };

@@ -1,5 +1,5 @@
 import './SkillsList.css';
-import { Rings } from '../GraphicElements';
+
 import Skill from '../Skill/Skill';
 
 function SkillsList({ skillArr }) {
@@ -13,9 +13,6 @@ function SkillsList({ skillArr }) {
 					/>
 				))}
 			</ul>
-			<div className='rings-container'>
-				<Rings />
-			</div>
 		</section>
 	);
 }

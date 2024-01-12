@@ -2,8 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	border-bottom: 1px solid var(--color-white);
-	margin-bottom: 3.9rem;
+	width: 100%;
+	max-width: 80em;
+	margin: 0 auto 3.9em;
 	position: relative;
 }
 
@@ -26,7 +29,7 @@
 	margin-bottom: 0.5em;
 }
 
-.form__content {
+.form__description {
 	text-align: center;
 	color: var(--color-light-gray);
 	font-size: 1.6rem;
@@ -86,11 +89,77 @@ textarea {
 
 form > .rings-container {
 	position: absolute;
-	top: 420px;
+	top: 393px;
 
 	left: -342px;
 }
 
 form > .rings-container > .rings {
 	width: 100%;
+}
+
+@media (min-width: 48em) {
+	.form {
+		margin-bottom: 3em;
+	}
+
+	.form__title {
+		font-size: 7.2rem;
+		letter-spacing: -2.05px;
+		margin-bottom: 0.2777em;
+	}
+
+	.form__description {
+		color: var(--color-light-gray);
+		font-size: 1.8rem;
+		line-height: 1.5555;
+	}
+
+	.form__heading {
+		margin-bottom: 4.8em;
+	}
+
+	form > .rings-container {
+		top: 500px;
+		left: -370px;
+	}
+}
+
+@media (min-width: 64em) {
+	.form {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 9rem;
+		max-width: 111em;
+		padding: 0 3.2em 0;
+		margin: 0 auto 4.7em;
+	}
+
+	.form__heading {
+		margin-bottom: 0;
+	}
+
+	.form__title {
+		width: 100%;
+	}
+
+	.form__description {
+		text-align: left;
+	}
+
+	.form__body > .btn {
+		margin-bottom: 5.75em;
+	}
+
+	form > .rings-container {
+		top: 250px;
+		left: -350px;
+	}
+}
+
+@media (min-width: 75em) {
+	.form {
+		gap: 20rem;
+	}
 }

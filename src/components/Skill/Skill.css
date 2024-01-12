@@ -15,3 +15,29 @@
 	line-height: 1.625;
 	color: var(--color-light-gray);
 }
+@media (min-width: 34em) {
+	.skill {
+		display: flex;
+		gap: 1.4em;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.skill-title {
+		font-size: 3.6rem;
+		letter-spacing: -1.5px;
+		line-height: 1.1666;
+	}
+	.skill-experience {
+		font-size: 1.8rem;
+		line-height: 1.5555;
+	}
+}
+
+@media (min-width: 48em) {
+	.skill-title {
+		font-size: 4.8rem;
+		letter-spacing: -1.5px;
+		line-height: 1.1666;
+	}
+}

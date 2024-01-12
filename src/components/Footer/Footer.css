@@ -14,7 +14,28 @@ footer {
 	gap: 2rem;
 }
 
-.footer__content > .icons {
+.footer__content > .icons-list {
 	display: flex;
 	gap: 2.5em;
+}
+
+@media (min-width: 48em) {
+	footer {
+		width: 100%;
+	}
+
+	.footer__content {
+		width: 100%;
+		max-width: 80em;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 64em) {
+	.footer__content {
+		max-width: 111em;
+		padding: 0 3.2rem 0;
+	}
 }

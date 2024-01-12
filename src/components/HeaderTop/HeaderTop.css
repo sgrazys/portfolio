@@ -10,3 +10,26 @@
 	position: relative;
 	z-index: 10;
 }
+
+@media (min-width: 48em) {
+	.header-top {
+		max-width: 70.8em;
+		padding-top: 2.9em;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 auto 9em;
+	}
+}
+
+@media (min-width: 64em) {
+	.header-top {
+		max-width: 111em;
+		padding-top: 3.9em;
+	}
+}
+
+@media (min-width: 90em) {
+	.header-top {
+		margin-bottom: 12.7em;
+	}
+}

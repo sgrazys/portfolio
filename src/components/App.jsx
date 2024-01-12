@@ -1,5 +1,5 @@
 import myData from '../myData';
-
+import '../index.css';
 import Footer from './Footer/Footer';
 import { Circle, Rings } from './GraphicElements';
 import Header from './Header/Header';
@@ -18,7 +18,6 @@ function App() {
 				<div className='circle-container'>
 					<Circle />
 				</div>
-
 				<Header
 					socialmediaList={socialMedia}
 					fullName={'Saulius Grazys'}
@@ -27,8 +26,12 @@ function App() {
 						learn and grow in the dynamic world of Front-end development.`}
 				/>
 			</header>
+
 			<main>
 				<SkillsList skillArr={skills} />
+				<div className='rings-container'>
+					<Rings />
+				</div>
 				<Projects />
 			</main>
 

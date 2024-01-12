@@ -8,6 +8,11 @@
 	--color-light-gray: #d9d9d9;
 }
 
+@font-face {
+	font-family: 'SpaceGrotesk';
+	src: url('../public/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'); /* Path to your font file */
+}
+
 html {
 	scroll-behavior: smooth;
 	font-size: 62.5%;
@@ -39,4 +44,37 @@ ul {
 	background-color: var(--color-black);
 
 	min-height: 100vh;
+}
+
+main {
+	position: relative;
+}
+
+main > .rings-container {
+	position: absolute;
+	left: 60%;
+	top: 35.8%;
+}
+
+main .rings {
+	width: 100%;
+}
+
+@media (min-width: 34em) {
+	main > .rings-container {
+		top: 26.8%;
+	}
+}
+@media (min-width: 48em) {
+	main > .rings-container {
+		top: 36.8%;
+		left: 70%;
+	}
+}
+
+@media (min-width: 64em) {
+	main > .rings-container {
+		top: 28%;
+		left: 75%;
+	}
 }

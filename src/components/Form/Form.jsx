@@ -7,7 +7,7 @@ function Form() {
 		<form className='form'>
 			<div className='form__heading'>
 				<h2 className='form__title'>Contact me</h2>
-				<p className='form__content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sitconsequatur at dolorum laudantium? Eligendi .</p>
+				<p className='form__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sitconsequatur at dolorum laudantium? Eligendi .</p>
 			</div>
 
 			<div className='form__body'>

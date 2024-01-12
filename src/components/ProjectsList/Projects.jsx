@@ -10,7 +10,7 @@ function Projects() {
 				<h2 className='header__title'>Projects</h2>
 				<Button>Contact me</Button>
 			</div>
-			<ul className='cards'>
+			<ul className='project-list'>
 				<Card title={'Saulius'}>
 					<Tool toolName={'html'} />
 					<Tool toolName={'css'} />

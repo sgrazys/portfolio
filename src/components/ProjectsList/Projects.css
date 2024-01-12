@@ -1,5 +1,7 @@
 .projects {
 	padding: 0 1.6em 8em;
+	max-width: 40rem;
+	margin: 0 auto;
 }
 
 .projects__header {
@@ -7,7 +9,7 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	max-width: 40rem;
+
 	margin-bottom: 4em;
 }
 
@@ -19,9 +21,44 @@
 	line-height: 1;
 }
 
-.cards {
+.project-list {
 	display: grid;
 	grid-template-columns: 1fr;
 	justify-items: center;
 	gap: 4em;
+}
+
+@media (min-width: 48em) {
+	.projects {
+		padding: 0 3.2em 10em;
+		max-width: 80em;
+	}
+	.projects__header {
+		justify-content: space-between;
+		margin-bottom: 6em;
+	}
+	.project-list {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.header__title {
+		font-size: 7.2rem;
+
+		letter-spacing: -2.25px;
+	}
+}
+
+@media (min-width: 64em) {
+	.projects {
+		padding: 0 6.2em 10em;
+		max-width: 111em;
+	}
+
+	.projects__header {
+		margin-bottom: 8em;
+	}
+
+	.project-list {
+		max-width: 111rem;
+	}
 }
