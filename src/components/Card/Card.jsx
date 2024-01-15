@@ -7,7 +7,7 @@ function Card({ title, img, siteURL, codeURL, children }) {
 			<div className='image'>
 				<img
 					className='card__img'
-					src={process.env.PUBLIC_URL + `assets/images/thumbnail-${img}.png`}
+					src={process.env.PUBLIC_URL + `assets/images/thumbnail-${img}.webp`}
 					alt=''
 				/>
 
