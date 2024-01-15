@@ -46,8 +46,9 @@ function Form() {
 
 	return (
 		<form
+			data-netlify='true'
+			data-netlify-honeypot='bot-field'
 			name='contact'
-			netlify
 			id='form'
 			className='form'
 			onSubmit={handleSubmit}>
@@ -87,6 +88,10 @@ function Form() {
 					rows='4'
 					name='message'></textarea>
 
+				<input
+					type='hidden'
+					name='bot-field'
+				/>
 				<button
 					className='btn'
 					type='submit'>
