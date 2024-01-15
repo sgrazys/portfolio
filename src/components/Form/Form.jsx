@@ -2,14 +2,14 @@ import './Form.css';
 
 import { Rings } from '../GraphicElements';
 import { useEffect, useState } from 'react';
-// import Input from '../Input/Input';
+import Input from '../Input/Input';
 
 function Form() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
-	// const [textAreaMsg, setTextAreaMsg] = useState('');
+	const [textAreaMsg, setTextAreaMsg] = useState('');
 
-	// const [emailErrMsg, setEmailErrMsg] = useState('');
+	const [emailErrMsg, setEmailErrMsg] = useState('');
 
 	const [showNameErr, setShowNameErr] = useState(false);
 	const [showEmailErr, setShowEmailErr] = useState(false);
@@ -26,17 +26,38 @@ function Form() {
 		if (name.trim().length === 0) setShowNameErr(true);
 		if (!email) {
 			setShowEmailErr(true);
-			// setEmailErrMsg('Field can not be empty');
+			setEmailErrMsg('Field can not be empty');
 		}
 
 		if ((email && isNotAllowedSymbol) || (email && !email.includes('@')) || (email && !domain.includes('.'))) {
-			// setEmailErrMsg('Sorry, invalid format here');
+			setEmailErrMsg('Sorry, invalid format here');
 			setShowEmailErr(true);
 		}
 
+		if (showNameErr || showEmailErr) {
+			return;
+		}
+
+		// MESSING
+		const form = e.target;
+		const formData = new FormData(form);
+
+		fetch('/', {
+			method: 'POST',
+			body: formData,
+		})
+			.then((response) => {
+				console.log('Form submitted successfully:', response);
+			})
+			.catch((error) => {
+				console.error('Error submitting form:', error);
+			});
+
+		// // MESSING
+
 		setName('');
 		setEmail('');
-		// setTextAreaMsg('');
+		setTextAreaMsg('');
 	}
 
 	useEffect(() => {
@@ -65,32 +86,7 @@ function Form() {
 			</div>
 
 			<div className='form__body'>
-				{/* TESTING PURPOSE START */}
-				<form
-					name='contact'
-					method='post'>
-					<input
-						type='hidden'
-						name='form-name'
-						value='contact'
-					/>
-					<input
-						type='text'
-						name='name'
-					/>
-					<input
-						type='text'
-						name='email'
-					/>
-					<textarea name='message'></textarea>
-					<p>
-						<button type='submit'>Send</button>
-					</p>
-				</form>
-
-				{/* TESTING PURPOSE END */}
-
-				{/* <Input
+				<Input
 					onChange={(e) => setName(e.target.value)}
 					value={name}
 					type={'text'}
@@ -108,7 +104,6 @@ function Form() {
 					showErr={showEmailErr}
 					errMsg={emailErrMsg}
 				/>
-
 				<textarea
 					onChange={(e) => setTextAreaMsg(e.target.value)}
 					value={textAreaMsg}
@@ -116,8 +111,11 @@ function Form() {
 					cols='20'
 					rows='4'
 					name='message'></textarea>
-
-				<button type='submit'>Send</button> */}
+				<button
+					type='submit'
+					className='btn'>
+					Send message
+				</button>
 			</div>
 			<div className='rings-container'>
 				<Rings />
