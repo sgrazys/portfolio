@@ -42,18 +42,18 @@ function Form() {
 
 		// MESSING
 
-		if (isValindInputs) {
-			const myForm = e.target;
-			const formData = new FormData(myForm);
+		// if (isValindInputs) {
+		// 	const myForm = e.target;
+		// 	const formData = new FormData(myForm);
 
-			fetch('/', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				body: new URLSearchParams(formData).toString(),
-			})
-				.then(() => console.log('Success'))
-				.catch((error) => alert(error));
-		}
+		// 	fetch('/', {
+		// 		method: 'POST',
+		// 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		// 		body: new URLSearchParams(formData).toString(),
+		// 	})
+		// 		.then(() => console.log('Success'))
+		// 		.catch((error) => alert(error));
+		// }
 
 		// // MESSING
 
