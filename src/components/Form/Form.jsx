@@ -92,11 +92,7 @@ function Form() {
 					rows='4'
 					name='message'></textarea>
 
-				<button
-					className='btn'
-					type='submit'>
-					Send message
-				</button>
+				<button type='submit'>Send</button>
 			</div>
 			<div className='rings-container'>
 				<Rings />
