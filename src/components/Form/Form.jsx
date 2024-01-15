@@ -2,14 +2,14 @@ import './Form.css';
 
 import { Rings } from '../GraphicElements';
 import { useEffect, useState } from 'react';
-import Input from '../Input/Input';
+// import Input from '../Input/Input';
 
 function Form() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
-	const [textAreaMsg, setTextAreaMsg] = useState('');
+	// const [textAreaMsg, setTextAreaMsg] = useState('');
 
-	const [emailErrMsg, setEmailErrMsg] = useState('');
+	// const [emailErrMsg, setEmailErrMsg] = useState('');
 
 	const [showNameErr, setShowNameErr] = useState(false);
 	const [showEmailErr, setShowEmailErr] = useState(false);
@@ -26,17 +26,17 @@ function Form() {
 		if (name.trim().length === 0) setShowNameErr(true);
 		if (!email) {
 			setShowEmailErr(true);
-			setEmailErrMsg('Field can not be empty');
+			// setEmailErrMsg('Field can not be empty');
 		}
 
 		if ((email && isNotAllowedSymbol) || (email && !email.includes('@')) || (email && !domain.includes('.'))) {
-			setEmailErrMsg('Sorry, invalid format here');
+			// setEmailErrMsg('Sorry, invalid format here');
 			setShowEmailErr(true);
 		}
 
 		setName('');
 		setEmail('');
-		setTextAreaMsg('');
+		// setTextAreaMsg('');
 	}
 
 	useEffect(() => {
