@@ -21,9 +21,7 @@ function App() {
 				<Header
 					socialmediaList={socialMedia}
 					fullName={'Saulius Grazys'}
-					intro={`Based in Vilnius, Lithuania. Passionate and dedicated Front-end developer seeking an entry-level position to embark on a journey in web development. I am
-						drive to create visually captivating, user-friendly and modern digital experiences. I bring a blend of enthusiasm, adaptability, and a continuous hunger to
-						learn and grow in the dynamic world of Front-end development.`}
+					intro={`Based in Vilnius, Lithuania, I am dedicated to becoming a professional front-end developer, seeking an entry-level position to start my journey in web development. I enjoy creating visually captivating, user-friendly, and modern digital experiences. I am adaptable and full of enthusiasm continuous learner, aiming to grow in the dynamic world of front-end development.`}
 				/>
 			</header>
 

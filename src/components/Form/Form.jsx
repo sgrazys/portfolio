@@ -36,6 +36,7 @@ function Form() {
 
 		setName('');
 		setEmail('');
+		setTextAreaMsg('');
 	}
 
 	useEffect(() => {
@@ -45,11 +46,17 @@ function Form() {
 
 	return (
 		<form
+			name='contact'
+			netlify
+			id='form'
 			className='form'
 			onSubmit={handleSubmit}>
 			<div className='form__heading'>
 				<h2 className='form__title'>Contact me</h2>
-				<p className='form__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sitconsequatur at dolorum laudantium? Eligendi .</p>
+				<p className='form__description'>
+					To accelerate my journey in front-end development, I am open to internships, collaboration on web projects and front-end-related tasks. If you need assistance,
+					I am glad to help. So let's talk!
+				</p>
 			</div>
 
 			<div className='form__body'>
@@ -77,9 +84,14 @@ function Form() {
 					value={textAreaMsg}
 					placeholder='Message'
 					cols='20'
-					rows='4'></textarea>
+					rows='4'
+					name='message'></textarea>
 
-				<button className='btn'>Send message</button>
+				<button
+					className='btn'
+					type='submit'>
+					Send message
+				</button>
 			</div>
 			<div className='rings-container'>
 				<Rings />

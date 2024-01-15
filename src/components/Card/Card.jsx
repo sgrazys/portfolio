@@ -1,24 +1,19 @@
 import './Card.css';
 import Button from '../Button/Button';
 
-function Card({ title, children }) {
+function Card({ title, img, siteURL, codeURL, children }) {
 	return (
 		<li className='card'>
-			{/* <div className='card-layer__buttons'>
-				<Button>View project</Button>
-				<Button>View codde</Button>
-			</div> */}
-
 			<div className='image'>
 				<img
 					className='card__img'
-					src={process.env.PUBLIC_URL + 'assets/images/thumbnail-project-1-small.webp'}
+					src={process.env.PUBLIC_URL + `assets/images/thumbnail-${img}.png`}
 					alt=''
 				/>
 
 				<div className='image-overlay'>
-					<Button>View project</Button>
-					<Button>View codde</Button>
+					<Button url={siteURL}>View project</Button>
+					<Button url={codeURL}>View codde</Button>
 				</div>
 			</div>
 
@@ -26,8 +21,8 @@ function Card({ title, children }) {
 			<div className='card__tools'>{children}</div>
 
 			<div className='card__buttons'>
-				<Button>View project</Button>
-				<Button>View codde</Button>
+				<Button url={siteURL}>View project</Button>
+				<Button url={codeURL}>View codde</Button>
 			</div>
 		</li>
 	);

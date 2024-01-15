@@ -43,8 +43,8 @@ header > .circle-container > .circle {
 	max-width: 44.5rem;
 }
 
-.mobile-profile-img {
-	background-image: url('../../../public/assets/images/image-profile-mobile.webp');
+.profile-img {
+	background-image: url('../../../public/assets/images/profile-img-mob.webp'), linear-gradient(rgba(36, 36, 36, 0), rgba(36, 36, 36, 1));
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 38rem;
@@ -107,8 +107,8 @@ header > .circle-container > .circle {
 		justify-content: flex-start;
 	}
 
-	.mobile-profile-img {
-		background-image: url('../../../public/assets/images/image-profile-tablet.webp');
+	.profile-img {
+		background-image: url('../../../public/assets/images/profile-img-tablet.webp');
 		height: 64rem;
 		max-width: 34.2rem;
 		margin: 0;
@@ -173,8 +173,8 @@ header > .circle-container > .circle {
 }
 
 @media (min-width: 75em) {
-	.mobile-profile-img {
-		background-image: url('../../../public/assets/images/image-profile-desktop.webp');
+	.profile-img {
+		background-image: url('../../../public/assets/images/profile-img-dsktp.webp');
 		height: 72rem;
 		max-width: 44.5rem;
 		right: 4%;
@@ -187,8 +187,8 @@ header > .circle-container > .circle {
 }
 
 @media (min-width: 90em) {
-	.mobile-profile-img {
-		right: 12%;
+	.profile-img {
+		right: 11%;
 	}
 
 	header > .rings-container {
@@ -198,6 +198,6 @@ header > .circle-container > .circle {
 
 	header > .circle-container {
 		top: 76%;
-		left: 53%;
+		left: 54%;
 	}
 }
