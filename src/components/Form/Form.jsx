@@ -33,21 +33,20 @@ function Form() {
 			setShowEmailErr(true);
 		}
 
-		if (showNameErr || showEmailErr) {
-			return;
-		}
+		if (!showNameErr || !showEmailErr) {
+			const myForm = e.target;
+			const formData = new FormData(myForm);
+
+			fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: new URLSearchParams(formData).toString(),
+			})
+				.then(alert('all good'))
+				.catch((error) => alert(error));
+		} else return;
 
 		// MESSING
-		const myForm = e.target;
-		const formData = new FormData(myForm);
-
-		fetch('/', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formData).toString(),
-		})
-			.then(alert('all good'))
-			.catch((error) => alert(error));
 
 		// // MESSING
 
