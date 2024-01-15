@@ -90,7 +90,8 @@ function Form() {
 
 				<input
 					type='hidden'
-					name='bot-field'
+					name='contact'
+					value='my_site_contact'
 				/>
 				<button
 					className='btn'
