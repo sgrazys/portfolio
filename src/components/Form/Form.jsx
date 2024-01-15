@@ -14,7 +14,7 @@ function Form() {
 	const [showNameErr, setShowNameErr] = useState(false);
 	const [showEmailErr, setShowEmailErr] = useState(false);
 
-	const [isValidInput, setIsValidInputs] = useState(false);
+	const [isValindInputs, setIsValidInput] = useState(false);
 
 	const invalidSymbols = [' ', '!', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', ',', '\\', '?', '/'];
 
@@ -26,34 +26,38 @@ function Form() {
 		const domain = email.slice(email.indexOf('@'));
 
 		if (name.trim().length === 0) setShowNameErr(true);
-
-		if (!email.trim()) {
+		if (!email) {
 			setShowEmailErr(true);
 			setEmailErrMsg('Field can not be empty');
-		} else if (isNotAllowedSymbol || !email.includes('@') || !domain.includes('.')) {
+		}
+
+		if ((email && isNotAllowedSymbol) || (email && !email.includes('@')) || (email && !domain.includes('.'))) {
 			setEmailErrMsg('Sorry, invalid format here');
 			setShowEmailErr(true);
 		}
 
+		if (showNameErr || showEmailErr) {
+			return;
+		}
+
 		// MESSING
-		// if (isValidInput) {
-		// 	const myForm = e.target;
-		// 	const formData = new FormData(myForm);
+		const myForm = e.target;
+		const formData = new FormData(myForm);
 
-		// 	fetch('/', {
-		// 		method: 'POST',
-		// 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		// 		body: new URLSearchParams(formData).toString(),
-		// 	})
-		// 		.then(alert('all good'))
-		// 		.catch((error) => alert(error));
-		// 	// MESSING
-		// }
-
-		setName('');
-		setEmail('');
-		setTextAreaMsg('');
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: new URLSearchParams(formData).toString(),
+		})
+			.then(() => console.log('Success'))
+			.catch((error) => alert(error));
 	}
+	// // MESSING
+
+	setName('');
+	setEmail('');
+	setTextAreaMsg('');
+
 	useEffect(() => {
 		if (name && showNameErr) setShowNameErr(false);
 		if (email && showEmailErr) setShowEmailErr(false);
