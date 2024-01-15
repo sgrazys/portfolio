@@ -46,7 +46,7 @@ function Form() {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: new URLSearchParams(formData).toString(),
 		})
-			.then(() => alert('ALL GOOD'))
+			.then(alert('all good'))
 			.catch((error) => alert(error));
 
 		// // MESSING
