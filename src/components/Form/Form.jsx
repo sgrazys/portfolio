@@ -39,19 +39,16 @@ function Form() {
 		}
 
 		// MESSING
-		const form = e.target;
-		const formData = new FormData(form);
+		const myForm = e.target;
+		const formData = new FormData(myForm);
 
 		fetch('/', {
 			method: 'POST',
-			body: formData,
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: new URLSearchParams(formData).toString(),
 		})
-			.then((response) => {
-				console.log('Form submitted successfully:', response);
-			})
-			.catch((error) => {
-				console.error('Error submitting form:', error);
-			});
+			.then(() => alert('ALL GOOD'))
+			.catch((error) => alert(error));
 
 		// // MESSING
 
@@ -59,7 +56,6 @@ function Form() {
 		setEmail('');
 		setTextAreaMsg('');
 	}
-
 	useEffect(() => {
 		if (name && showNameErr) setShowNameErr(false);
 		if (email && showEmailErr) setShowEmailErr(false);
@@ -74,9 +70,10 @@ function Form() {
 			onSubmit={handleSubmit}>
 			<input
 				type='hidden'
-				name='my-site-contact-form'
+				name='form-name'
 				value='contact'
 			/>
+
 			<div className='form__heading'>
 				<h2 className='form__title'>Contact me</h2>
 				<p className='form__description'>
