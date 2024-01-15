@@ -24,12 +24,11 @@ function Form() {
 		const domain = email.slice(email.indexOf('@'));
 
 		if (name.trim().length === 0) setShowNameErr(true);
-		if (!email) {
+
+		if (!email.trim()) {
 			setShowEmailErr(true);
 			setEmailErrMsg('Field can not be empty');
-		}
-
-		if ((email && isNotAllowedSymbol) || (email && !email.includes('@')) || (email && !domain.includes('.'))) {
+		} else if (isNotAllowedSymbol || !email.includes('@') || !domain.includes('.')) {
 			setEmailErrMsg('Sorry, invalid format here');
 			setShowEmailErr(true);
 		}
