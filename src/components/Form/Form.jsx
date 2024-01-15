@@ -35,8 +35,8 @@ function Form() {
 			setShowEmailErr(true);
 		}
 
+		// MESSING
 		if (isValidInput) {
-			// MESSING
 			const myForm = e.target;
 			const formData = new FormData(myForm);
 
