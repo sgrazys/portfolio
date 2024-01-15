@@ -36,19 +36,19 @@ function Form() {
 		}
 
 		// MESSING
-		if (isValidInput) {
-			const myForm = e.target;
-			const formData = new FormData(myForm);
+		// if (isValidInput) {
+		// 	const myForm = e.target;
+		// 	const formData = new FormData(myForm);
 
-			fetch('/', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				body: new URLSearchParams(formData).toString(),
-			})
-				.then(alert('all good'))
-				.catch((error) => alert(error));
-			// MESSING
-		}
+		// 	fetch('/', {
+		// 		method: 'POST',
+		// 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		// 		body: new URLSearchParams(formData).toString(),
+		// 	})
+		// 		.then(alert('all good'))
+		// 		.catch((error) => alert(error));
+		// 	// MESSING
+		// }
 
 		setName('');
 		setEmail('');
