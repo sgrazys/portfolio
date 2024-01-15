@@ -14,6 +14,8 @@ function Form() {
 	const [showNameErr, setShowNameErr] = useState(false);
 	const [showEmailErr, setShowEmailErr] = useState(false);
 
+	const [isValidInput, setIsValidInputs] = useState(false);
+
 	const invalidSymbols = [' ', '!', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', ',', '\\', '?', '/'];
 
 	function handleSubmit(e) {
@@ -33,7 +35,8 @@ function Form() {
 			setShowEmailErr(true);
 		}
 
-		if (showNameErr === true || showEmailErr === true) {
+		if (isValidInput) {
+			// MESSING
 			const myForm = e.target;
 			const formData = new FormData(myForm);
 
@@ -44,11 +47,8 @@ function Form() {
 			})
 				.then(alert('all good'))
 				.catch((error) => alert(error));
-		} else return;
-
-		// MESSING
-
-		// // MESSING
+			// MESSING
+		}
 
 		setName('');
 		setEmail('');
