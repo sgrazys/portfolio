@@ -33,7 +33,7 @@ function Form() {
 			setShowEmailErr(true);
 		}
 
-		if (!showNameErr || !showEmailErr) {
+		if (showNameErr === true || showEmailErr === true) {
 			const myForm = e.target;
 			const formData = new FormData(myForm);
 
