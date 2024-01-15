@@ -79,10 +79,10 @@ function Form() {
 						name='name'
 					/>
 					<input
-						type='email'
+						type='text'
 						name='email'
 					/>
-					Message: <textarea name='message'></textarea>
+					<textarea name='message'></textarea>
 					<p>
 						<button type='submit'>Send</button>
 					</p>
