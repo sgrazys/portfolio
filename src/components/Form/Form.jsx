@@ -14,8 +14,6 @@ function Form() {
 	const [showNameErr, setShowNameErr] = useState(false);
 	const [showEmailErr, setShowEmailErr] = useState(false);
 
-	const [isValindInputs, setIsValidInput] = useState(false);
-
 	const invalidSymbols = [' ', '!', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', ',', '\\', '?', '/'];
 
 	function handleSubmit(e) {
@@ -36,27 +34,6 @@ function Form() {
 			setShowEmailErr(true);
 		}
 
-		if (showNameErr || showEmailErr) {
-			return;
-		}
-
-		// MESSING
-
-		// if (isValindInputs) {
-		// 	const myForm = e.target;
-		// 	const formData = new FormData(myForm);
-
-		// 	fetch('/', {
-		// 		method: 'POST',
-		// 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		// 		body: new URLSearchParams(formData).toString(),
-		// 	})
-		// 		.then(() => console.log('Success'))
-		// 		.catch((error) => alert(error));
-		// }
-
-		// // MESSING
-
 		setName('');
 		setEmail('');
 		setTextAreaMsg('');
@@ -64,6 +41,7 @@ function Form() {
 
 	useEffect(() => {
 		if (name && showNameErr) setShowNameErr(false);
+
 		if (email && showEmailErr) setShowEmailErr(false);
 	}, [name, showNameErr, email, showEmailErr]);
 
