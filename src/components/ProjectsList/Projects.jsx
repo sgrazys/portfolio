@@ -12,6 +12,15 @@ function Projects() {
 			</div>
 			<ul className='project-list'>
 				<Card
+					siteURL='https://sauliusgrazys.netlify.app'
+					codeURL='https://github.com/sgrazys/portfolio'
+					title={'Personal website'}
+					img={'1'}>
+					<Tool toolName={'html'} />
+					<Tool toolName={'css'} />
+					<Tool toolName={'react'} />
+				</Card>
+				<Card
 					siteURL='https://sgrazys-sign-up-intro-component.netlify.app/'
 					codeURL='https://github.com/sgrazys/intro-component-with-signup'
 					title={'Component with sign-up'}
