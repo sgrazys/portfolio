@@ -1,4 +1,5 @@
 import myData from '../myData';
+
 import '../index.css';
 import Footer from './Footer/Footer';
 import { Circle, Rings } from './GraphicElements';
