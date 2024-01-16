@@ -10,6 +10,7 @@ function Form() {
 	const [textAreaMsg, setTextAreaMsg] = useState('');
 
 	const [emailErrMsg, setEmailErrMsg] = useState('');
+	const [isEmailValid, setIsEmailValid] = useState(true);
 
 	const [showNameErr, setShowNameErr] = useState(false);
 	const [showEmailErr, setShowEmailErr] = useState(false);
@@ -31,12 +32,18 @@ function Form() {
 
 		if (!email.trim()) {
 			setEmailErrMsg('Field can not be empty');
+			setIsEmailValid(false);
 			setShowEmailErr(true);
 			isValid = false;
 		} else if (isNotAllowedSymbol || !email.includes('@') || !domain.includes('.')) {
 			setEmailErrMsg('Sorry, invalid format here');
+			setIsEmailValid(false);
 			setShowEmailErr(true);
 			isValid = false;
+		} else {
+			setEmailErrMsg('');
+			setIsEmailValid(true);
+			setShowEmailErr(false);
 		}
 
 		if (!isValid) {
@@ -57,14 +64,12 @@ function Form() {
 			});
 
 			if (response.ok) {
-				// Reset form fields on successful submission
 				setName('');
 				setEmail('');
 				setTextAreaMsg('');
 				setShowNameErr(false);
 				setShowEmailErr(false);
 			} else {
-				// Handle errors from Formspree
 				console.error('Failed to submit form data to Formspree');
 			}
 		} catch (error) {
@@ -74,8 +79,8 @@ function Form() {
 
 	useEffect(() => {
 		if (name && showNameErr) setShowNameErr(false);
-		if (email && showEmailErr) setShowEmailErr(false);
-	}, [name, showNameErr, email, showEmailErr]);
+		if (isEmailValid && email && showEmailErr) setShowEmailErr(false);
+	}, [name, showNameErr, email, showEmailErr, isEmailValid]);
 
 	return (
 		<form
