@@ -16,9 +16,7 @@ function App() {
 				<div className='rings-container'>
 					<Rings />
 				</div>
-				<div className='circle-container'>
-					<Circle />
-				</div>
+
 				<Header
 					socialmediaList={socialMedia}
 					fullName={'Saulius Grazys'}
@@ -28,9 +26,7 @@ function App() {
 
 			<main>
 				<SkillsList skillArr={skills} />
-				<div className='rings-container'>
-					<Rings />
-				</div>
+				<div className='rings-container'></div>
 				<Projects />
 			</main>
 
