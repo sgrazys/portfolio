@@ -16,7 +16,9 @@ function App() {
 				<div className='rings-container'>
 					<Rings />
 				</div>
-
+				<div className='circle-container'>
+					<Circle />
+				</div>
 				<Header
 					socialmediaList={socialMedia}
 					fullName={'Saulius Grazys'}
